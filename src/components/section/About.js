@@ -14,9 +14,8 @@ const About = () => {
           A Oculares Óptica chega em Macaé com um novo conceito de atendimento e
           prestação de serviços no ramo Óptico. Sob a responsabilidade técnica
           de Valber Pontes, CROO-RJ 19.06.0599-4, com mais de 20 anos de
-          experiência no mercado óptico, no Rio de janeiro e Espirito Santo, a
-          Oculares Óptica tem no atendimento e na sua estrutura moderna, seus
-          principais diferenciais.
+          experiência no mercado . A Oculares Óptica tem no atendimento e na sua
+          estrutura moderna, seus principais diferenciais.
         </div>
         <div className={classes.description}>
           Além disso, conta com uma equipe de colaboradores e funcionários
@@ -33,7 +32,7 @@ export default About;
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    backgroundColor: "#FFF",
+    backgroundColor: "#inherit",
   },
   wrapper: {
     display: "flex",
@@ -41,19 +40,20 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     padding: "30px 0",
     backgroundColor: "inherit",
+    scrollPaddingTop: 10,
   },
   title: {
     fontSize: 24,
   },
   description: {
-    width: "50%",
+    width: "90%",
     paddingTop: 30,
     fontSize: 16,
     lineHeight: 2,
   },
   [theme.breakpoints.down("sm")]: {
     description: {
-      width: "80%",
+      width: "90%",
     },
   },
 }));

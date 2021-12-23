@@ -1,101 +1,135 @@
-import React from 'react';
+import React from "react";
 
-import { Container, Grid, Typography } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles';
+import { Container, Grid, Typography } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core/styles";
 
-import TwitterIcon from '@material-ui/icons/Twitter';
-import YouTubeIcon from '@material-ui/icons/YouTube';
-import InstagramIcon from '@material-ui/icons/Instagram';
-import FacebookIcon from '@material-ui/icons/Facebook';
+import Image from "next/image";
+
+import InstagramIcon from "@material-ui/icons/Instagram";
+import FacebookIcon from "@material-ui/icons/Facebook";
+import EmailIcon from "@material-ui/icons/Email";
 
 const Footer = () => {
-	const classes = useStyles();
+  const classes = useStyles();
 
-	return (
-		<React.Fragment>
-			<div className={classes.root} />
-			<Container className={classes.container}>
-				<Grid container spacing={4}>
-					<Grid item xs={6} sm={6} md={3}>
-						<Typography variant="h5">Figma</Typography>
-						<div className={classes.iconContainer}>
-							<div className={classes.icon}>
-								<TwitterIcon fontSize="small" />
-							</div>
-							<Typography variant="h6">Twitter</Typography>
-						</div>
-						<div className={classes.iconContainer}>
-							<div className={classes.icon}>
-								<YouTubeIcon fontSize="small" />
-							</div>
-							<Typography variant="h6">YouTube</Typography>
-						</div>
-						<div className={classes.iconContainer}>
-							<div className={classes.icon}>
-								<InstagramIcon fontSize="small" />
-							</div>
-							<Typography variant="h6">Instagram</Typography>
-						</div>
-						<div className={classes.iconContainer}>
-							<div className={classes.icon}>
-								<FacebookIcon fontSize="small" />
-							</div>
-							<Typography variant="h6">Facebook</Typography>
-						</div>
-						<Typography variant="h6">Manage Cookies</Typography>
-					</Grid>
-					<Grid item xs={6} sm={6} md={3}>
-						<Typography variant="h5">Use Cases</Typography>
-						<Typography variant="h6">UI design</Typography>
-						<Typography variant="h6">UX design</Typography>
-						<Typography variant="h6">Graphic design</Typography>
-						<Typography variant="h6">Wireframing</Typography>
-						<Typography variant="h6">Diagramming</Typography>
-						<Typography variant="h6">Brainstorming</Typography>
-						<Typography variant="h6">Templates</Typography>
-						<Typography variant="h6">Remote design</Typography>
-					</Grid>
-					<Grid item xs={6} sm={6} md={3}>
-						<Typography variant="h5">Resources</Typography>
-						<Typography variant="h6">Blog</Typography>
-						<Typography variant="h6">Best practices</Typography>
-						<Typography variant="h6">Support</Typography>
-						<Typography variant="h6">Developers</Typography>
-						<Typography variant="h6">Learn design</Typography>
-						<Typography variant="h6">Downloads</Typography>
-						<Typography variant="h6">What's new</Typography>
-						<Typography variant="h6">Releases</Typography>
-						<Typography variant="h6">Careers</Typography>
-						<Typography variant="h6">About us</Typography>
-					</Grid>
-					<Grid item xs={6} sm={6} md={3}>
-						<Typography variant="h5">Compare</Typography>
-						<Typography variant="h6">Sketch</Typography>
-						<Typography variant="h6">Adobe XD</Typography>
-						<Typography variant="h6">Invision Studio</Typography>
-						<Typography variant="h6">Framer</Typography>
-						<Typography variant="h6">Design on Windows</Typography>
-					</Grid>
-				</Grid>
-			</Container>
-		</React.Fragment>
-	);
+  return (
+    <React.Fragment>
+      <div className={classes.root}>
+        <Container className={classes.container}>
+          <Grid container spacing={4}>
+            <Grid item xs={6} sm={6} md={4} className={classes.gridItem}>
+              <div>
+                <Typography variant="h5" style={{ paddingBottom: 15 }}>
+                  LOGO
+                </Typography>
+
+                <div className={classes.iconContainer}>
+                  <div className={classes.icon}>
+                    <InstagramIcon fontSize="small" />
+                  </div>
+                  <Typography variant="h6" style={{ padding: "8px 0" }}>
+                    Instagram
+                  </Typography>
+                </div>
+
+                <div className={classes.iconContainer}>
+                  <div className={classes.icon}>
+                    <FacebookIcon fontSize="small" />
+                  </div>
+                  <Typography variant="h6" style={{ padding: "8px 0" }}>
+                    Facebook
+                  </Typography>
+                </div>
+
+                <div className={classes.iconContainer}>
+                  <div className={classes.icon}>
+                    <EmailIcon fontSize="small" />
+                  </div>
+                  <Typography variant="h6" style={{ padding: "8px 0" }}>
+                    Email
+                  </Typography>
+                </div>
+              </div>
+            </Grid>
+
+            <Grid item xs={6} sm={6} md={4} className={classes.gridItem}>
+              <div>
+                <Typography variant="h5" style={{ paddingBottom: 15 }}>
+                  Oculares Óptica
+                </Typography>
+                <Typography variant="h6" style={{ padding: "8px 0" }}>
+                  <a href="#quem-somos">Quem Somos</a>
+                </Typography>
+                <Typography variant="h6" style={{ padding: "8px 0" }}>
+                  <a href="#nossa-equipe">Equipe</a>
+                </Typography>
+                <Typography variant="h6" style={{ padding: "8px 0" }}>
+                  <a href="#contato">Contato</a>
+                </Typography>
+              </div>
+            </Grid>
+
+            <Grid item xs={6} sm={6} md={4} className={classes.gridItem}>
+              <div style={{ width: "70%" }}>
+                <Typography variant="h5" style={{ paddingBottom: 15 }}>
+                  Entre em Contato
+                </Typography>
+                <Typography variant="h6" style={{ padding: "8px 0" }}>
+                  Telefone: (22) 2222-2222{" "}
+                </Typography>
+                <Typography variant="h6" style={{ padding: "8px 0" }}>
+                  Whatsapp: (22) 99999-9999{" "}
+                </Typography>
+                <Typography variant="h6" style={{ padding: "8px 0" }}>
+                  Horário de atendimento: segunda à sexta, das 9h às 17h (exceto
+                  feriados).
+                </Typography>
+                <Typography variant="h5" style={{ padding: "18px 0" }}>
+                  Endereço
+                </Typography>
+                <Typography variant="h6" style={{ padding: "8px 0" }}>
+                  Rua Teixeira de Gouveia - Centro - Macaé/ RJ
+                </Typography>
+              </div>
+            </Grid>
+          </Grid>
+        </Container>
+        <div className={classes.copyright}>
+          © Copyrigth 2022 - Rua Teixeira de Gouveia - Centro - Macaé/ RJ. Tel.:
+          (22)2222-2222
+        </div>
+      </div>
+    </React.Fragment>
+  );
 };
 
 export default Footer;
 
 const useStyles = makeStyles({
-	root: {
-		padding: '25px 0'
-	},
-	container: {
-		backgroundColor: 'inherit'
-	},
-	iconContainer: {
-		display: 'flex',
-		alignItems: 'center'
-	},
-	icon: {
-		marginRight: 10
-	}
+  root: { backgroundColor: "black", color: "#FFF" },
+  container: {
+    backgroundColor: "inherit",
+    padding: "70px 0 50px 0",
+  },
+  gridItem: {
+    display: "flex",
+    justifyContent: "center",
+  },
+  iconContainer: {
+    display: "flex",
+    alignItems: "center",
+  },
+  icon: {
+    display: "flex",
+    alignItems: "center",
+    marginRight: 10,
+  },
+  copyright: {
+    display: "flex",
+    justifyContent: "center",
+    padding: "5px 0 5px 0",
+    fontSize: 10,
+    backgroundColor: "black",
+    color: "white",
+  },
 });
